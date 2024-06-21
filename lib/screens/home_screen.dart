@@ -7,23 +7,23 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(200.0), // Adjust height as needed
+        preferredSize: Size.fromHeight(150.0), // Adjust height as needed
         child: CustomAppBar(), // Use your CustomAppBar here
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0), // Adjust padding as needed
+        padding: const EdgeInsets.all(0.0), // Adjust padding as needed
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'Welcome to Home Screen!',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 20),
-            Menu(), // Include your Menu widget here
+            // Text(
+            //   'Welcome to Home Screen!',
+            //   style: TextStyle(
+            //     fontSize: 24,
+            //     fontWeight: FontWeight.bold,
+            //   ),
+            // ),
+            // SizedBox(height: 20),
+            Center(child: Menu()), // Include your Menu widget here
           ],
         ),
       ),
