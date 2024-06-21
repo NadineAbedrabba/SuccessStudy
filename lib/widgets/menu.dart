@@ -25,6 +25,32 @@ class Menu extends StatelessWidget {
                           width: 250,
                           height: 83.33,
                           decoration: BoxDecoration(color: Color(0xFFFFB703)),
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                top: 15,
+                                left:
+                                    105, // Center the icon horizontally within the Container (250 - 40)/2 = 105
+                                child: Icon(
+                                  Icons
+                                      .person_outline, // The icon you want to add
+                                  size: 40, // Adjust the size as needed
+                                  color: Color(
+                                      0xFF023047), // Adjust the color as needed
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left:
+                            26.5, // Center the icon horizontally within the Container
+                        top: 0, // Adjust position as needed
+                        child: Icon(
+                          Icons.person,
+                          size: 40, // Adjust size as needed
+                          color: Color(0xFFFFB703), // Adjust color as needed
                         ),
                       ),
                       Positioned(
@@ -37,7 +63,7 @@ class Menu extends StatelessWidget {
                             children: [
                               Positioned(
                                 left: 0,
-                                top: 48,
+                                top: 50,
                                 child: Text(
                                   'Rejoignez nous',
                                   textAlign: TextAlign.center,
@@ -114,7 +140,8 @@ class Menu extends StatelessWidget {
                                           height: 64,
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
-                                              image: AssetImage("assets/images/packs.png"),
+                                              image: AssetImage(
+                                                  "assets/images/packs.png"),
                                               fit: BoxFit.fill,
                                             ),
                                           ),
@@ -183,7 +210,8 @@ class Menu extends StatelessWidget {
                                   height: 35,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
-                                      image: AssetImage("assets/images/guideUtil.png"),
+                                      image: AssetImage(
+                                          "assets/images/guideUtil.png"),
                                       fit: BoxFit.fill,
                                     ),
                                   ),
@@ -207,6 +235,21 @@ class Menu extends StatelessWidget {
                                 child: Container(
                                   width: 167,
                                   height: 83,
+                                  child: Stack(
+                                    children: [
+                                      Positioned(
+                                        top: 15,
+                                        left:
+                                            60, // Center the icon horizontally within the Container (250 - 40)/2 = 105
+                                        child: Image.asset(
+                                          'assets/images/mail.png', // Path to your image asset
+                                          width:
+                                              43.79, // Adjust width as needed
+                                          height: 32, // Adjust height as needed
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     border: Border(
@@ -256,7 +299,7 @@ class Menu extends StatelessWidget {
                   height: 83.33,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                    image: AssetImage("assets/images/eiffel.png"),
+                      image: AssetImage("assets/images/eiffel.png"),
                       fit: BoxFit.fill,
                     ),
                     border: Border(
@@ -274,6 +317,20 @@ class Menu extends StatelessWidget {
                 child: Container(
                   width: 167,
                   height: 83.33,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        top: 15,
+                        left:
+                            60, // Center the icon horizontally within the Container (250 - 40)/2 = 105
+                        child: Image.asset(
+                          'assets/images/map.png', // Path to your image asset
+                          width: 43.79, // Adjust width as needed
+                          height: 32, // Adjust height as needed
+                        ),
+                      ),
+                    ],
+                  ),
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
