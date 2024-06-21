@@ -108,34 +108,33 @@ class Menu extends StatelessWidget {
                                     children: [
                                       Positioned(
                                         left: 0,
-                                        top: 28,
+                                        top: 7,
                                         child: Container(
                                           width: 53,
-                                          height: 36,
+                                          height: 64,
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
-                                              image: NetworkImage(
-                                                  "https://via.placeholder.com/53x36"),
+                                              image: AssetImage("assets/images/packs.png"),
                                               fit: BoxFit.fill,
                                             ),
                                           ),
                                         ),
                                       ),
-                                      Positioned(
-                                        left: 5,
-                                        top: 0,
-                                        child: Container(
-                                          width: 43,
-                                          height: 35,
-                                          decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                              image: NetworkImage(
-                                                  "https://via.placeholder.com/43x35"),
-                                              fit: BoxFit.fill,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
+                                      // Positioned(
+                                      //   left: 5,
+                                      //   top: 0,
+                                      //   child: Container(
+                                      //     width: 43,
+                                      //     height: 35,
+                                      //     decoration: BoxDecoration(
+                                      //       image: DecorationImage(
+                                      //         image: NetworkImage(
+                                      //             "https://via.placeholder.com/43x35"),
+                                      //         fit: BoxFit.fill,
+                                      //       ),
+                                      //     ),
+                                      //   ),
+                                      // ),
                                     ],
                                   ),
                                 ),
@@ -152,8 +151,7 @@ class Menu extends StatelessWidget {
                           height: 83.33,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage(
-                                  "https://via.placeholder.com/167x83"),
+                              image: AssetImage("assets/images/guide.png"),
                               fit: BoxFit.fill,
                             ),
                             border: Border(
@@ -185,24 +183,8 @@ class Menu extends StatelessWidget {
                                   height: 35,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
-                                      image: NetworkImage(
-                                          "https://via.placeholder.com/50x35"),
+                                      image: AssetImage("assets/images/guideUtil.png"),
                                       fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                left: 14,
-                                top: 24,
-                                child: Container(
-                                  width: 47,
-                                  height: 15,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      image: NetworkImage(
-                                          "https://via.placeholder.com/47x15"),
-                                      fit: BoxFit.contain,
                                     ),
                                   ),
                                 ),
@@ -274,7 +256,7 @@ class Menu extends StatelessWidget {
                   height: 83.33,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/83x83"),
+                    image: AssetImage("assets/images/eiffel.png"),
                       fit: BoxFit.fill,
                     ),
                     border: Border(
