@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../widgets/custom_app_bar.dart'; // Import your CustomAppBar widget
-import '../widgets/menu.dart'; // Import your Menu widget
-
-class HomeScreen extends StatelessWidget {
+import '../widgets/menu_2.dart'; // Import your Menu widget
+import '../widgets/footer.dart'; 
+class HomeScreenUniversity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,18 +15,13 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Text(
-            //   'Welcome to Home Screen!',
-            //   style: TextStyle(
-            //     fontSize: 24,
-            //     fontWeight: FontWeight.bold,
-            //   ),
-            // ),
-            // SizedBox(height: 20),
-            Center(child: Menu()), // Include your Menu widget here
+            Center(child: MenuUniversity()), // Include your Menu widget here
+              SizedBox(height: 40), // Add spacing between Menu and Footer
+            Footer(),
           ],
         ),
       ),
+      
     );
   }
 }

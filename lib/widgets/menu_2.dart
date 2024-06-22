@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Menu extends StatelessWidget {
+class MenuUniversity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -32,8 +32,7 @@ class Menu extends StatelessWidget {
                                 left:
                                     105, // Center the icon horizontally within the Container (250 - 40)/2 = 105
                                 child: Icon(
-                                  Icons
-                                      .person_outline, // The icon you want to add
+                                  Icons.school, // The icon you want to add
                                   size: 40, // Adjust the size as needed
                                   color: Color(
                                       0xFF023047), // Adjust the color as needed
@@ -43,16 +42,16 @@ class Menu extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
-                        left:
-                            26.5, // Center the icon horizontally within the Container
-                        top: 0, // Adjust position as needed
-                        child: Icon(
-                          Icons.person,
-                          size: 40, // Adjust size as needed
-                          color: Color(0xFFFFB703), // Adjust color as needed
-                        ),
-                      ),
+                      // Positioned(
+                      //   left:
+                      //       26.5, // Center the icon horizontally within the Container
+                      //   top: 0, // Adjust position as needed
+                      //   child: Icon(
+                      //     Icons.person,
+                      //     size: 40, // Adjust size as needed
+                      //     color: Color(0xFFFFB703), // Adjust color as needed
+                      //   ),
+                      // ),
                       Positioned(
                         left: 78,
                         top: 10,
@@ -138,12 +137,14 @@ class Menu extends StatelessWidget {
                                         child: Container(
                                           width: 53,
                                           height: 64,
-                                          decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                              image: AssetImage(
-                                                  "assets/images/packs.png"),
-                                              fit: BoxFit.fill,
-                                            ),
+                                          color: Color(0x023047),
+                                          child: Icon(
+                                            Icons
+                                                .real_estate_agent, // The icon you want to add
+                                            size:
+                                                40, // Adjust the size as needed
+                                            color: Color(
+                                                0xFFFFFF), // Adjust the color as needed
                                           ),
                                         ),
                                       ),
@@ -323,11 +324,9 @@ class Menu extends StatelessWidget {
                         top: 15,
                         left:
                             60, // Center the icon horizontally within the Container (250 - 40)/2 = 105
-                        child: Image.asset(
-                          'assets/images/map.png', // Path to your image asset
-                          width: 43.79, // Adjust width as needed
-                          height: 32, // Adjust height as needed
-                        ),
+                        child: Icon(Icons.menu_book, // The icon you want to add
+                            size: 40, // Adjust the size as needed
+                            color: Color(0xFFFFB703)),
                       ),
                     ],
                   ),
@@ -351,7 +350,7 @@ class Menu extends StatelessWidget {
                         left: 0,
                         top: 44,
                         child: Text(
-                          'Destinations',
+                          'Mes Formations',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Color(0xFFFFB703),
