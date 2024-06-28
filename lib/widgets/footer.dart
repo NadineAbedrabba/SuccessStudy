@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Footer extends StatelessWidget {
+  const Footer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -12,33 +14,33 @@ class Footer extends StatelessWidget {
           Container(
             width: 57,
             height: 57,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
               color: Color(0xFFFFB703),
               image: DecorationImage(
                 image: AssetImage(
                   "assets/images/footerInside.png", // Replace with your image path
                 ),
-                fit: BoxFit.cover,
+                // fit: BoxFit.cover,
               ),
             ),
           ),
-          SizedBox(width: 7), // Spacer between image and text
+          const SizedBox(width: 7), // Spacer between image and text
 
           // Text and Background Container
           Container(
             width: 125.50,
             height: 35,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
                   "assets/images/besoinDaide.png", // Replace with your image path
                 ),
-                fit: BoxFit.cover,
+                // fit: BoxFit.cover,
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsets.only(left: 20),
+            child: const Padding(
+              padding: EdgeInsets.only(left: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
