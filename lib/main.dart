@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/home-screen-etudiant.dart';
 import 'package:flutter_application_1/screens/home_screen_university.dart';
 import 'screens/home_screen_join.dart'; // Import your screen widget
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreenJoin(), // Set HomeScreen as the home screen
+      home: HomeScreenWithNotification(), // Set HomeScreen as the home screen
     );
   }
 }

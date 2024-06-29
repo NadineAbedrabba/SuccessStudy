@@ -15,13 +15,18 @@ class Footer extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: Color(0xFFFFB703),
-              image: DecorationImage(
-                image: AssetImage(
-                  "assets/images/footerInside.png", // Replace with your image path
-                ),
-                fit: BoxFit.cover,
-              ),
             ),
+               child: Padding(
+              padding: const EdgeInsets.all(15.0), // Adjust padding to reduce image size
+              child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/footerInside.png"), // Replace with your image path
+                    fit: BoxFit.contain,
+                  ),
+                ),
+            ),
+          ),
           ),
           SizedBox(width: 7), // Spacer between image and text
 
