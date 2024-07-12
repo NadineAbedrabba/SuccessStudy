@@ -336,14 +336,26 @@ class NotificationList extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(
                                 vertical: 8.0), // Example padding
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'a accepté votre demande d' 'Inscription',
+                                  'a accepté votre demande actuelle d\'Inscription',
                                   softWrap: true,
                                   style: TextStyle(
                                     color: Color(0xFF023047),
-                                    fontSize: 13,
-                                    height: 0,
+                                    fontFamily: 'Poppins',
+                                    fontSize: 12,
+                                  ),
+                                ),
+                                SizedBox(height: 5),
+                                Text(
+                                  '10 Juillet 2024, 14:05:55',
+                                  softWrap: true,
+                                  style: TextStyle(
+                                    color: Color(0xFF023047),
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 10,
                                   ),
                                 ),
                               ],
