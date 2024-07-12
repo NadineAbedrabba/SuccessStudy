@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_application_1/widgets/home_widgets.dart';
 class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
 
@@ -121,11 +121,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                       color: Color(0xFFFFB703),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
-                    child: Icon(
-                      Icons.notifications,
-                      size: 24,
-                      color: Colors.white,
-                    ),
+                    child:NotificationIcon(),
                   ),
                 ],
               ),

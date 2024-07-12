@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+
 Widget buildSectionOne(String titleTextOne, Widget iconOrImage) {
   return Container(
     width: 250,
@@ -8,10 +11,9 @@ Widget buildSectionOne(String titleTextOne, Widget iconOrImage) {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
-          width: 65, // Largeur de l'image
-          height: 35, // Hauteur de l'image
-          child: iconOrImage
-        ),
+            width: 65, // Largeur de l'image
+            height: 35, // Hauteur de l'image
+            child: iconOrImage),
         SizedBox(height: 9), // Espace entre l'image et le texte
         Text(
           titleTextOne,
@@ -29,7 +31,8 @@ Widget buildSectionOne(String titleTextOne, Widget iconOrImage) {
   );
 }
 
-Widget buildSectionTwo(String titleTextTwo, IconData iconDataTwo, Widget etudiantsWidget) {
+Widget buildSectionTwo(
+    String titleTextTwo, IconData iconDataTwo, Widget etudiantsWidget) {
   return Row(children: [
     Container(
       width: 167,
@@ -59,6 +62,7 @@ Widget buildSectionTwo(String titleTextTwo, IconData iconDataTwo, Widget etudian
             style: const TextStyle(
               color: Color(0xFFFFB703), // Couleur du texte
               fontSize: 12,
+              fontFamily: 'Poppins',
               fontWeight: FontWeight.bold, // Taille de la police
             ),
           ),
@@ -130,6 +134,7 @@ Widget buildSectionFour(Widget transactionWidget) {
             style: TextStyle(
               color: Color(0xFFFFB703), // Couleur du texte
               fontSize: 12,
+              fontFamily: 'Poppins',
               fontWeight: FontWeight.bold, // Taille de la police
             ),
           ),
@@ -174,3 +179,184 @@ Widget nosPacks = Container(
     ),
   ),
 );
+
+class AnimatedTitle extends StatefulWidget {
+  @override
+  _AnimatedTitleState createState() => _AnimatedTitleState();
+}
+
+class _AnimatedTitleState extends State<AnimatedTitle> {
+  bool showFirst = false;
+  bool showSecond = false;
+  bool showThird = false;
+
+  @override
+  void initState() {
+    super.initState();
+    startAnimation();
+  }
+
+  void startAnimation() async {
+    setState(() {
+      showFirst = true;
+    });
+    await Future.delayed(Duration(seconds: 2));
+    setState(() {
+      showSecond = true;
+    });
+    await Future.delayed(Duration(seconds: 2));
+    setState(() {
+      showThird = true;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+        width: 192,
+        height: 103,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (showFirst)
+              AnimatedTextKit(
+                animatedTexts: [
+                  TyperAnimatedText(
+                    'CREATE',
+                    textStyle: TextStyle(
+                      color: Color(0xFFFFB703),
+                      fontSize: 24.0,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+                isRepeatingAnimation: false,
+              ),
+            if (showSecond)
+              AnimatedTextKit(
+                animatedTexts: [
+                  TyperAnimatedText(
+                    'YOUR SUCCESS',
+                    textStyle: TextStyle(
+                      color: Color(0xFF023047),
+                      fontSize: 24.0,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+                isRepeatingAnimation: false,
+              ),
+            if (showThird)
+              AnimatedTextKit(
+                animatedTexts: [
+                  TyperAnimatedText(
+                    'WITH US!',
+                    textStyle: TextStyle(
+                      color: Color(0xFFFB8500),
+                      fontSize: 24.0,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+                isRepeatingAnimation: false,
+              ),
+          ],
+        ));
+  }
+}
+
+class NotificationIcon extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (context) {
+            return NotificationList();
+          },
+        );
+      },
+      child: Container(
+        width: 33.12,
+        height: 34,
+        decoration: BoxDecoration(
+          color: Color(0xFFFFB703),
+          borderRadius: BorderRadius.circular(8.0),
+        ),
+        child: Icon(
+          Icons.notifications,
+          size: 24,
+          color: Colors.white,
+        ),
+      ),
+    );
+  }
+}
+
+class NotificationList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Notifications',
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: 10, // Replace with your actual notification count
+              itemBuilder: (context, index) {
+                return Container(
+                    height: 100,
+                    margin: EdgeInsets.only(bottom: 12),
+                    padding: EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(1.0),
+                      border: Border.all(
+                        color: Color(0xFFFFB703),
+                        width: 2.0,
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        Image.asset('assets/images/fst.png', width: 90),
+                        SizedBox(width: 10),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 8.0), // Example padding
+                            child: Column(
+                              children: [
+                                Text(
+                                  'a accepté votre demande d' 'Inscription',
+                                  softWrap: true,
+                                  style: TextStyle(
+                                    color: Color(0xFF023047),
+                                    fontSize: 13,
+                                    height: 0,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ));
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

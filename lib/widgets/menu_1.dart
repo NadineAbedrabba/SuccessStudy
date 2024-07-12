@@ -19,7 +19,7 @@ class MenuJoin extends StatelessWidget {
       height: 340,
       child: Column(
         children: [
-          //one
+          
           buildSectionOne(titleTextOne, iconOrImage),
           buildSectionTwo(titleTextTwo, iconDataTwo, eiffelPic),
           buildSectionThree(),
