@@ -3,31 +3,40 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
 Widget buildSectionOne(String titleTextOne, Widget iconOrImage) {
-  return Container(
-    width: 250,
-    height: 83.33,
-    decoration: const BoxDecoration(color: Color(0xFFFFB703)),
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        SizedBox(
-            width: 65, // Largeur de l'image
-            height: 35, // Hauteur de l'image
-            child: iconOrImage),
-        SizedBox(height: 9), // Espace entre l'image et le texte
-        Text(
-          titleTextOne,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Color(0xFF023047),
-            fontSize: 12,
-            fontFamily: 'Poppins',
-            fontWeight: FontWeight.w700,
-            height: 0,
+  return Builder(
+    builder: (context) {
+      return GestureDetector(
+        onTap: () {
+            Navigator.pushNamed(context, '/profile');
+        },
+        child: Container(
+          width: 250,
+          height: 83.33,
+          decoration: const BoxDecoration(color: Color(0xFFFFB703)),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                  width: 65, // Largeur de l'image
+                  height: 35, // Hauteur de l'image
+                  child: iconOrImage),
+              SizedBox(height: 9), // Espace entre l'image et le texte
+              Text(
+                titleTextOne,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color(0xFF023047),
+                  fontSize: 12,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w700,
+                  height: 0,
+                ),
+              ),
+            ],
           ),
         ),
-      ],
-    ),
+      );
+    }
   );
 }
 

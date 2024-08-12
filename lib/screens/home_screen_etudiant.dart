@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widgets/custom_app_bar.dart'; // Import your CustomAppBar widget
+import 'package:flutter_application_1/widgets/home_widgets.dart';
+import '../widgets/custom_app_bar_1.dart'; // Import your CustomAppBar widget
 import '../widgets/menu_3.dart'; // Import your Menu widget
 import '../widgets/footer.dart';
 
@@ -10,7 +11,7 @@ class HomeScreenEtudiant extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-          preferredSize: Size.fromHeight(150.0), // Adjust height as needed
+          preferredSize: Size.fromHeight(150.0 + 20), // Adjust height as needed
           child:
               CustomAppBar(),      // Use your CustomAppBar here
           ),
@@ -19,6 +20,7 @@ class HomeScreenEtudiant extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            AnimatedTitle(),
             Center(child: MenuEtudiant()), // Include your Menu widget here
             SizedBox(height: 40), // Add spacing between Menu and Footer
             Footer(),
